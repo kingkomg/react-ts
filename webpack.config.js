@@ -15,6 +15,11 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        enforce: "pre",
+        test:/\.js$/,
+        loader: "source-map-loader"
+      },
+      {
         test: /\.css$/,
         use:[
           {
@@ -36,5 +41,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./index.html"
     })
-  ]
+  ],
+  devtool: "source-map",
+  resolve: {
+    extensions: [".js", ".ts", ".tsx"]
+  }
 };

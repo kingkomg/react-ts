@@ -1,13 +1,10 @@
-import React from 'react';
-import './App.css';
-import Module from "./modules/Module";
+import * as React from 'react';
+import * as styles from './App.css';
+// import Module from "./modules/Module";
 
-const App: React.FC = () => {
+const App: React.FunctionComponent = () => {
   return (
-    <div className="App">
-      Hello World
-    <Module/>
-    </div>
+    <div className={styles.App}> Hello World </div>
   );
 };
 
