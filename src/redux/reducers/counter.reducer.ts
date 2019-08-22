@@ -1,10 +1,10 @@
-import {DECREMENT, INCREMENT} from "../Constants";
+import {Constants} from "../Constants";
 
 const counterReducer = (counter: number = 0, action: { type: string }): number => {
   switch (action.type) {
-    case INCREMENT:
+    case Constants.INCREMENT:
       return counter + 1;
-    case DECREMENT:
+    case Constants.DECREMENT:
       return counter - 1;
     default:
       return counter;

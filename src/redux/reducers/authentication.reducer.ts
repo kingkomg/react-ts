@@ -1,10 +1,10 @@
-import {LOGIN, LOGOUT} from "../Constants";
+import {Constants} from "../Constants";
 
 const authenticationReducer = (loggedIn: boolean = false, action: { type: string }): boolean => {
   switch (action.type) {
-    case LOGIN:
+    case Constants.LOGIN:
       return true;
-    case LOGOUT:
+    case Constants.LOGOUT:
       return false;
     default:
       return loggedIn;
