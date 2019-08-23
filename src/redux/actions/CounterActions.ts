@@ -12,9 +12,3 @@ export const request_increment = () => {
 export const request_decrement = () => {
   return {type: Constants.REQUEST_DECREMENT}
 };
-export const changeName = (name: string) => {
-  return {type: Constants.CHANGE_NAME, payload: name}
-};
-export const changePassword = (password: string) => {
-  return {type: Constants.CHANGE_PASSWORD, payload: password}
-};

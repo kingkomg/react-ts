@@ -6,10 +6,10 @@ import {Provider} from 'react-redux';
 import './index.css';
 import App from "./App";
 import allReducers from './redux/reducers'
-import {counterMiddleware} from "./redux/middleware/counter.middleware";
+import {loginService} from "./redux/middleware/login.service";
 
 const createStoreWithMiddleware = applyMiddleware(
-  counterMiddleware({})
+  loginService({})
 )(createStore);
 
 // @ts-ignore
