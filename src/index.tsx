@@ -18,7 +18,6 @@ const store = createStoreWithMiddleware(
   allReducers,
   enhancer
 );
-store.subscribe(() => console.log(store.getState()));
 
 ReactDOM.render(
   <Provider store={store}>

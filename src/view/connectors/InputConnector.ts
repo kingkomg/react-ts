@@ -1,17 +1,16 @@
 import {connect} from "react-redux";
-import Input, {InputEventProps, InputPartialDataProps, InputProps} from "../components/Input/Input";
+import Input, {InputEventProps, InputPartialDataProps} from "../components/Input/Input";
 import {Dispatch} from "redux";
 import {changeName} from "../../redux/actions/CounterActions";
+import {State} from "../../redux/State";
 
-const mapStateToProps = (value: string, ownProps: InputProps): InputPartialDataProps => ({
-  value: ownProps.value
+const mapStateToProps = (state: State): InputPartialDataProps => ({
+  value: state.inputReducer
 });
 
-const mapDispatchToProps = (dispatch: Dispatch, ownProps: InputProps): InputEventProps => {
-  const {onChange} = ownProps;
-  console.log(onChange);
+const mapDispatchToProps = (dispatch: Dispatch): InputEventProps => {
   return {
-    onChange: () => dispatch(changeName())
+    onChange: (value: string) => dispatch(changeName(value))
   };
 };
 
