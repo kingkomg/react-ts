@@ -1,16 +1,26 @@
 import * as React from 'react';
 import * as styles from './App.css';
-import Counter from "./view/connectors/CounterConnector";
 import Login from "./view/connectors/LoginConnector";
+import {RouterState} from "./redux/State";
+import {connect} from "react-redux";
 
-const App: React.FunctionComponent = () => {
+
+type AppProps = {
+  route: string
+}
+
+const mapStateToProps = (state: RouterState): AppProps => ({
+  route: state.route
+});
+
+const App: React.FunctionComponent<AppProps> = () => {
   return (
     <>
       <div className={styles.App}> Hello World</div>
-      <Counter/>
-      <Login />
+      <Login/>
     </>
   );
 };
 
-export default App;
+const AppConnected = connect(mapStateToProps)(App);
+export default AppConnected;

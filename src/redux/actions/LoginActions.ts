@@ -21,3 +21,6 @@ export const loginSuccess = () => {
 export const loginError = () => {
   return {type: Constants.LOGIN_ERROR}
 };
+export const authSuccess = () => {
+  return {type: Constants.AUTH_SUCCESS}
+};

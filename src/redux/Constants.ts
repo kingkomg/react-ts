@@ -13,6 +13,8 @@ const LOGGING_IN = 'LOGGING_IN';
 const LOGIN = 'LOGIN';
 const LOGOUT = 'LOGOUT';
 
+const AUTH_SUCCESS = 'AUTH_SUCCESS';
+
 export const Constants = {
   INCREMENT,
   DECREMENT,
@@ -25,5 +27,6 @@ export const Constants = {
   LOGIN_ERROR,
   LOGGING_IN,
   LOGIN,
-  LOGOUT
+  LOGOUT,
+  AUTH_SUCCESS
 };

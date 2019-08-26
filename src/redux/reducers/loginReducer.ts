@@ -1,9 +1,9 @@
 import {Constants} from "../Constants";
-import {LoginDataProps} from "../../view/components/Login/Login";
+import {LoginState} from "../State";
 
 const login = (
-  login: LoginDataProps = {name: '', password: '', error: '', loggingIn: false, loggedIn: false},
-  action: { type: string, payload: string }): LoginDataProps => {
+  login: LoginState = {name: '', password: '', error: '', loggingIn: false, loggedIn: false},
+  action: { type: string, payload: string }): LoginState => {
   switch (action.type) {
     case Constants.CHANGE_NAME:
       return {

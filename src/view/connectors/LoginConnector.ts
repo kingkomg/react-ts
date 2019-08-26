@@ -1,15 +1,11 @@
 import {connect} from "react-redux";
 import {Dispatch} from "redux";
-import {State} from "../../redux/State";
+import State from "../../redux/State";
 import Login, {LoginDataProps, LoginEventProps} from "../components/Login/Login";
 import {changeName, changePassword, logout, requestLogin} from "../../redux/actions/LoginActions";
 
 const mapStateToProps = (state: State): LoginDataProps => ({
-  name: state.login.name,
-  password: state.login.password,
-  error: state.login.error,
-  loggingIn: state.login.loggingIn,
-  loggedIn: state.login.loggedIn
+  ...state.login
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): LoginEventProps => {
